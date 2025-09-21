@@ -1,0 +1,288 @@
+:root {
+  /*  MALEFICIO CREO QUE ES EL NOMBRE DE LA PALETA
+    LO SAQUE DE COOLORS.CO*/
+    
+    --color-blanco-diente: #f8f9fa;
+    --color-azul-marino: #274C77;
+
+    --color-azul-beige: #adb5bd;
+
+    --color-verde-agua: #A3CEF1;
+    --color-gris-topo: #8b8c8998;
+   
+
+    --font-general: 'Roboto', sans-serif; /* Texto general */
+    --font-menu: 'Montserrat', sans-serif; /* Menú */
+    --font-title: 'Lato', sans-serif; /* Títulos */
+}
+
+
+
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Sección de presentación personal */
+/*
+.intro {
+    background-color: var(--color-blanco-diente);
+}
+    */
+
+.intro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.personal-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+
+
+.personal-description {
+    max-width: 500px;
+    text-align: left;
+}
+
+/* Sección de habilidades */
+.skills {
+    background-color: var(--color-azul-beige);
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+
+}
+
+.skills-container img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+/* Sección de proyectos */
+.projects {
+    background-color: var(--color-blanco-diente);
+}
+
+.projects-container {
+   /* display: flex;
+    justify-content: space-between;
+    gap: 20px;*/
+    display: flex;
+    flex-wrap: wrap; /* permite que los elementos pasen a la siguiente fila */
+    gap: 20px;
+    justify-content: center; /* centra los elementos */
+}
+
+.project-left img, .project-right img {
+    width: 450px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.project-left{
+margin-left : 70px;
+}
+
+.project-right{
+margin-right: 70px;
+}
+
+/* Sección de redes sociales */
+.social {
+    background-color: var(--color-azul-beige);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons img {
+    width: 50px;
+    height: 50px;
+}
+
+.imagen-certificado{
+    height: 220px;
+    width: 300px;
+    border: 10px solid --color-blanco-diente;
+    border-radius: 5px;
+}
+
+.container-certificados{
+    display: flex;
+    flex-direction: column; /* Cambia la dirección a columna */
+    gap: 20px; /* Espaciado entre los elementos */
+}
+
+.box-formulario{
+    position: center;
+    border: 10px solid --color-blanco-diente;
+    border-radius: 5px;
+
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: var(--color-azul-marino);
+}
+
+
+
+
+.box-formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #ced6df;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+form label,
+form input,
+form textarea,
+form button {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+form input, form textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #259863;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #157347;
+}
+
+
+
+
+
+
+/* Estilo para secciones */
+section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Estilo de las redes sociales */
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+}
+
+.title{
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+.navbar ul li {
+    font-family: var(--font-menu); /* Tipografía del menú */
+}
+
+/* Aplicar tipografía a todos los elementos <h2> */
+h2 {
+    font-family: var(--font-title); /* Tipografía de los títulos */
+}
+
+p{
+    font-family: var(--font-general);
+}
+
+.enviar-button{
+    font-size: 20px;
+}
+
+/* Titulos desplegables*/
+
+.collapsible {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+    margin: 10px 0;
+    padding: 0;
+    color: #333;
+    border: none;
+    background: none;
+    outline: none;
+    font-family: var(--font-title);
+}
+
+.collapsible::after {
+    content: '\25BC'; /* Flecha hacia abajo */
+    font-size: 18px;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.collapsible.active::after {
+    transform: rotate(180deg); /* Gira la flecha */
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 15px;
+   font-family: var(--font-general);
+}
+
+.content p {
+    margin: 10px 0;
+}
+
+.box-presentacion-textos{
+margin-top: 30px ;
+margin-bottom: 30px;
+
+margin-left: 20px;
+margin-right: 20px;
+}
